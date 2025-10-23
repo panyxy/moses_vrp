@@ -1,0 +1,9 @@
+_target_: envs.mtvrp.MTVRPEnv
+name: mtvrp
+
+check_solution: False # Whether to check the validity of the solution at the end of the episode
+
+generator_params:
+  num_loc: 20 # Number of locations to generate
+  variant_preset: "all" # the types of the vrp variants
+
