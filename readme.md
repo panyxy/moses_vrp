@@ -45,6 +45,8 @@ bash scripts/train_cada_base.sh [number of nodes: 50, 100]
 ```
 
 **(2) fine-tuning specialized LoRA experts based on frozen backbone model for OVRP, VRPL, VRPB and VRPTW, respectively**
+
+Please set the value of the option ***basis_policy_ckpt_path*** in the corresponding configuration files to the path of the pretrained model.
 ```
 # MoSES(RF):
 bash scripts/train_rf_lora.sh [number of nodes: 50, 100] 32 false
@@ -54,6 +56,8 @@ bash scripts/train_cada_lora.sh [number of nodes: 50, 100] 32 false
 ```
 
 **(3) dynamically aggregating LoRA experts as MoSES for 16 VRP variants**
+
+Please set the value of the option ***lora_modules_ckpt_path*** in the corresponding configuration files to the list of paths for the LoRA experts.
 ```
 # MoSES(RF):
 bash scripts/train_rf_multilora.sh [number of nodes: 50, 100] true false false [32,32,32,32,32] false false
